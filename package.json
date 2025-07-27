@@ -1,59 +1,47 @@
 {
   "name": "@fullcalendar/angular",
   "version": "6.1.18",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build lib && pnpm run meta",
-    "watch": "ng build lib --watch --configuration development",
-    "test": "ng test lib --watch=false --browsers ChromeHeadless",
-    "test:dev": "ng test lib",
-    "clean": "rm -rf dist .angular/cache",
-    "meta": "mkdir -p dist/lib && cp README.md LICENSE.txt dist/lib",
-    "ci": "pnpm run clean && pnpm run build && pnpm run test"
+  "title": "FullCalendar Angular Component",
+  "description": "The official Angular component for FullCalendar",
+  "keywords": [
+    "calendar",
+    "event",
+    "full-sized",
+    "fullcalendar",
+    "angular"
+  ],
+  "homepage": "https://fullcalendar.io/docs/angular",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/fullcalendar-angular.git"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/common": "12 - 20",
-    "@angular/core": "12 - 20",
+    "@angular/common": "12 - 19",
+    "@angular/core": "12 - 19",
     "@fullcalendar/core": "~6.1.18"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~13.3.10",
-    "@angular/animations": "~13.3.0",
-    "@angular/cli": "~13.3.10",
-    "@angular/common": "~13.3.0",
-    "@angular/compiler": "~13.3.0",
-    "@angular/compiler-cli": "~13.3.0",
-    "@angular/core": "~13.3.0",
-    "@angular/forms": "~13.3.0",
-    "@angular/platform-browser": "~13.3.0",
-    "@angular/platform-browser-dynamic": "~13.3.0",
-    "@angular/router": "~13.3.0",
-    "@fullcalendar/core": "~6.1.18",
-    "@fullcalendar/daygrid": "~6.1.18",
-    "@fullcalendar/interaction": "~6.1.18",
-    "@fullcalendar/list": "~6.1.18",
-    "@fullcalendar/resource": "~6.1.18",
-    "@fullcalendar/resource-timegrid": "~6.1.18",
-    "@fullcalendar/resource-timeline": "~6.1.18",
-    "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.11.1",
-    "jasmine-core": "~4.0.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.1.0",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "ng-packagr": "^13.0.0",
-    "rxjs": "~7.5.0",
-    "typescript": "~4.6.4",
-    "zone.js": "~0.11.4"
+  "module": "fesm2015/fullcalendar-angular.mjs",
+  "es2020": "fesm2020/fullcalendar-angular.mjs",
+  "esm2020": "esm2020/fullcalendar-angular.mjs",
+  "fesm2020": "fesm2020/fullcalendar-angular.mjs",
+  "fesm2015": "fesm2015/fullcalendar-angular.mjs",
+  "typings": "fullcalendar-angular.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./fullcalendar-angular.d.ts",
+      "esm2020": "./esm2020/fullcalendar-angular.mjs",
+      "es2020": "./fesm2020/fullcalendar-angular.mjs",
+      "es2015": "./fesm2015/fullcalendar-angular.mjs",
+      "node": "./fesm2015/fullcalendar-angular.mjs",
+      "default": "./fesm2020/fullcalendar-angular.mjs"
+    }
   },
-  "publishConfig": {
-    "directory": "./dist/lib",
-    "linkDirectory": true
-  }
+  "sideEffects": false
 }
